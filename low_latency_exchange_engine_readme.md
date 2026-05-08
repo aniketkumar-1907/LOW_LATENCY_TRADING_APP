@@ -584,6 +584,49 @@ Trading App/
 
 ---
 
+# Commands to Run
+
+1. Python WebSocket Exchange
+   - Start WebSocket Gateway
+     - `python3 -m exchange.gateway.websocket_gateway`
+   - Run Trading Client
+     - `python3 client/trader.py`
+
+2. Python TCP Exchange
+   - Start TCP Gateway
+     - `python3 -m exchange.gateway.tcp_gateway`
+   - Run TCP Benchmark
+     - `python3 -m benchmark.tcp_benchmark_runner`
+
+3. Build Native C++ Engine
+   - Navigate to C++ Engine
+     - `cd cpp_engine`
+   - Create Build Directory
+     - `mkdir build`
+   - Change to Build Directory
+     - `cd build`
+   - Compile C++ Engine
+     - `cmake ..`
+     - `make`
+
+4. Test C++ Engine From Python
+   - From Project Root
+     - `python3 test_cpp_engine.py`
+
+5. Run Hybrid Python + C++ Exchange
+   - Start TCP Gateway
+     - `python3 -m exchange.gateway.tcp_gateway`
+   - Run Benchmark
+     - `python3 -m benchmark.tcp_benchmark_runner`
+
+6. Run Pure Native C++ Benchmark
+   - Navigate to Build Directory
+     - `cd cpp_engine/build`
+   - Run Benchmark
+     - `./benchmark`
+
+---
+
 # Future Work
 
 The current implementation is intentionally simplified.
